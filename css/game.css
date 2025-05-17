@@ -1,0 +1,76 @@
+/* game.css */
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Navegação */
+nav a {
+  color: #ecf0f1;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Área do jogo */
+#game-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+/* Canvas do jogo */
+canvas {
+  background: url('../img/battlefield.png') no-repeat center center;
+  background-size: cover;
+  border: 3px solid #34495e;
+  border-radius: 4px;
+}
+
+
+
+/* Instruções */
+#instructions {
+  width: 800px;
+  margin: 1rem auto 2rem;
+  background-color: #ecf0f1;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  text-align: left;
+}
+
+#instructions h2 {
+  margin-bottom: 0.5rem;
+}
+
+#instructions ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+#instructions li {
+  margin-bottom: 0.5rem;
+}

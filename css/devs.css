@@ -1,0 +1,85 @@
+/* desenvolvedores.css */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+}
+
+/* Header e Navegação (mesmo estilo da Home) */
+header {
+  background-color: #333;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+header h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+}
+nav a {
+  color: #ddd;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+nav a:hover,
+nav a.ativo {
+  background-color: #555;
+  color: #fff;
+}
+
+/* Seção de Desenvolvedores */
+#equipe {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.dev {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.dev:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+.dev h2 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 0.6rem;
+}
+.dev p {
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+  padding: 1rem 0;
+  border-top: 1px solid #ddd;
+}
