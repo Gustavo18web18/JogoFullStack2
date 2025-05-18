@@ -1,104 +1,49 @@
-/* game.css */
-
-/* Reset básico */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* Corpo da página */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-/* Cabeçalho */
-header {
-  background-color: #2c3e50;
-  color: #ecf0f1;
-  padding: 1rem;
-  text-align: center;
-}
-
-/* Navegação */
-nav a {
-  color: #ecf0f1;
-  margin: 0 1rem;
-  text-decoration: none;
-  font-weight: bold;
-}
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Área do jogo */
-#game-area {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem auto;
-}
-
-/* Canvas do jogo */
-canvas {
-  background: url('../img/battlefield.png') no-repeat center center;
-  background-size: cover;
-  border: 3px solid #34495e;
-  border-radius: 4px;
-  cursor: none;
-}
-
-
-
-/* Instruções */
-#instructions {
-  width: 800px;
-  margin: 1rem auto 2rem;
-  background-color: #ecf0f1;
-  padding: 1rem 1.5rem;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  text-align: left;
-}
-
-#instructions h2 {
-  margin-bottom: 0.5rem;
-}
-
-#instructions ul {
-  list-style-type: disc;
-  margin-left: 1.5rem;
-}
-
-#instructions li {
-  margin-bottom: 0.5rem;
-}
-
-
-/* Start Screen */
-#start-screen {
-  position: relative;
+/* Container fixo e centralizado */
+#game-container {
   width: 800px;
   height: 600px;
-  margin: 0 auto;
+  margin: 1rem auto;
+  border: var(--border-width) solid var(--color-accent);
+  border-radius: 6px;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Canvas dentro do container, mas oculto inicialmente */
+#game-container canvas {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: url("../img/battlefield.png") center/cover no-repeat;
+  cursor: none; /* se usar crosshair.png */
+}
+
+/* Start-screen ocupa o mesmo espaço */
+#start-screen {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('../img/battlefield.png') no-repeat center center;
-  background-size: cover;
-  border: 4px solid #e74c3c;
-  border-radius: 4px;
+  background: url('../img/battlefield.png') center/cover no-repeat;
 }
 
+/* Ao clicar, escondemos esta tela */
+#start-screen.hidden {
+  display: none;
+}
+
+/* Botão “Começar” */
 #start-button {
-  padding: 1rem 2rem;
   font-family: 'Press Start 2P', cursive;
   font-size: 0.8rem;
-  color: #1a1a1f;
+  padding: 1rem 2rem;
   background: #e74c3c;
+  color: #1a1a1f;
   border: 3px solid #1a1a1f;
+  border-radius: 4px;
   cursor: pointer;
   transition: background 0.2s;
 }
@@ -106,7 +51,4 @@ canvas {
   background: #c0392b;
 }
 
-/* Quando o jogo começar, vamos ocultar o #start-screen e mostrar #game-container */
-#start-screen.hidden {
-  display: none;
-}
+

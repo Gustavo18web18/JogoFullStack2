@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Jogar – Miniguerra de Tanques</title>
+  <title>Jogar – Miniguerra de Tanques 2D</title>
   <link rel="stylesheet" href="css/commom.css">
   <link rel="stylesheet" href="css/game.css">
 </head>
@@ -10,26 +10,32 @@
   <header>
     <h1>Miniguerra de Tanques 2D</h1>
     <nav>
-      <a href="index.html">Home</a> |
-      <a href="devs.html">Desenvolvedores</a> |
-      <a href="game.html">Jogar</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="devs.html">Desenvolvedores</a></li>
+        <li><a href="game.html" class="active">Jogar</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
-    <section id="game-area">
+    <h2>Jogar Agora</h2>
+
+    <div id="game-container">
+      <!-- Tela de início -->
+      <div id="start-screen">
+        <button id="start-button">Começar</button>
+      </div>
+      <!-- Canvas começa oculto, vai aparecer só após o clique -->
       <canvas id="gameCanvas" width="800" height="600"></canvas>
-    </section>
-    <section id="instructions">
-      <h2>Como Jogar</h2>
-      <ul>
-        <li><strong>Movimentação:</strong> WASD ou setas</li>
-        <li><strong>Atirar:</strong> Tecla Espaço</li>
-        <li><strong>Objetivo:</strong> Sobreviver o máximo de tempo e eliminar inimigos</li>
-      </ul>
-    </section>
+    </div>
   </main>
 
+  <footer>
+    © 2025 Miniguerra de Tanques 2D
+  </footer>
+
+  <!-- Único script necessário -->
   <script src="js/game.js"></script>
 </body>
 </html>
