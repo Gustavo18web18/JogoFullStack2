@@ -19,7 +19,6 @@
   cursor: none; /* se usar crosshair.png */
 }
 
-/* Start-screen ocupa o mesmo espaço */
 #start-screen {
   position: absolute;
   top: 0; left: 0;
@@ -35,7 +34,6 @@
   display: none;
 }
 
-/* Botão “Começar” */
 #start-button {
   font-family: 'Press Start 2P', cursive;
   font-size: 0.8rem;
