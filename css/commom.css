@@ -1,0 +1,71 @@
+/* common.css */
+
+/* Fonte “Press Start 2P” */
+body {
+  font-family: 'Press Start 2P', cursive;
+  background: #0f0f13;
+  color: #f0f0f0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Cabeçalho com borda grossa */
+header {
+  background: #1a1a1f;
+  border-bottom: 6px solid #e74c3c;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+/* Navegação em botões pixelados */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+}
+nav a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #2b2b33;
+  color: #f0f0f0;
+  text-decoration: none;
+  border: 3px solid #e74c3c;
+  border-radius: 4px;
+  transition: background 0.2s;
+  font-size: 0.7rem;
+}
+nav a:hover,
+nav a.active {
+  background: #e74c3c;
+  color: #1a1a1f;
+}
+
+/* Container central */
+main {
+  flex: 1;
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  background: #17171c;
+  border: 4px solid #e74c3c;
+  border-radius: 6px;
+  padding: 2rem;
+  box-shadow: 0 0 0 4px #1a1a1f;
+}
+
+/* Rodapé simples */
+footer {
+  background: #1a1a1f;
+  text-align: center;
+  padding: 1rem;
+  border-top: 4px solid #e74c3c;
+  font-size: 0.6rem;
+}

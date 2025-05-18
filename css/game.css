@@ -47,6 +47,7 @@ canvas {
   background-size: cover;
   border: 3px solid #34495e;
   border-radius: 4px;
+  cursor: none;
 }
 
 
@@ -73,4 +74,39 @@ canvas {
 
 #instructions li {
   margin-bottom: 0.5rem;
+}
+
+
+/* Start Screen */
+#start-screen {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('../img/battlefield.png') no-repeat center center;
+  background-size: cover;
+  border: 4px solid #e74c3c;
+  border-radius: 4px;
+}
+
+#start-button {
+  padding: 1rem 2rem;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  color: #1a1a1f;
+  background: #e74c3c;
+  border: 3px solid #1a1a1f;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#start-button:hover {
+  background: #c0392b;
+}
+
+/* Quando o jogo começar, vamos ocultar o #start-screen e mostrar #game-container */
+#start-screen.hidden {
+  display: none;
 }
